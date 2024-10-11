@@ -1,0 +1,121 @@
+@import '../../responsive.scss';
+
+nav {
+  display: flex;
+  // justify-content: space-between;
+  height: 100px;
+  align-items: center;
+
+  a{
+    transition: all 0.5s ease;
+
+    @include sm{
+      display: none;
+    }
+
+    &:hover{
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex: 3;
+
+   
+    .logo {
+        font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      span{
+        @include md{
+          display: none;
+        }
+
+        @include sm{
+          display: initial;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fcf5f3;
+    height: 100%;
+    flex: 2;
+
+    
+    
+    @include sm{
+      background-color: initial;
+    }
+
+    a{
+        padding: 12px 24px;
+        margin: 20px;
+    }
+
+    .signup{
+        background-color: #fece51;
+    }
+  }
+
+  .menuIcon{
+    display: none;
+    z-index: 999;
+    
+    img{
+      height: 36px;
+      width: 36px;
+      cursor: pointer;
+    }
+
+    @include sm{
+      display: inline;
+    }
+  }
+
+  .menu{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 1s ease;
+    
+    &.active{
+      right: 0;
+  }
+
+
+    a{
+      @include sm{
+        display: initial;
+        
+      }
+    }
+  }
+}
+
+
+  
+  

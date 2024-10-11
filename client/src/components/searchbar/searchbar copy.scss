@@ -1,0 +1,32 @@
+.searchBar{
+
+   
+
+    form{
+    border: 1px solid #999;
+    display: flex;
+    height: 50px;  
+    gap: 5px;  
+    justify-content: space-between;
+ 
+    input{
+        border: none;
+        background-color: transparent;
+    }
+    }
+
+    .buttons{
+        display: flex;
+
+        button{
+            padding: 20px;
+
+            &.active{
+                background-color: black;
+                color: white;
+            }
+        }
+
+        
+    }
+}
